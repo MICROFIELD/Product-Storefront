@@ -1,6 +1,6 @@
-# [Project name]
+# Morrow Supply
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A curated ecommerce storefront for beautifully made everyday objects and slow daily rituals.
 
 ## Run & Operate
 
@@ -22,15 +22,20 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- Storefront UI: `artifacts/product-storefront/src/`
+- Storefront entry and routes: `artifacts/product-storefront/src/App.tsx`
+- Storefront theme: `artifacts/product-storefront/src/index.css`
+- Shared API server: `artifacts/api-server/` (not required by the first storefront build)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first storefront version is frontend-only so shoppers can browse and manage a cart without requiring an account or server setup.
+- Cart state is intentionally local to the browser until a payment provider and order persistence are connected.
+- Checkout is represented as a clear handoff state rather than a fake payment flow.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Browse featured objects, search and filter the catalog, open product details, add items to a cart, adjust quantities, and review an order before checkout.
 
 ## User preferences
 
@@ -38,7 +43,7 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Connect a payment provider and order persistence before treating checkout as production-ready.
 
 ## Pointers
 
